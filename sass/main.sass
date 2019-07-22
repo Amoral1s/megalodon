@@ -1,0 +1,1594 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+html
+	overflow-x: hidden
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.3
+	font-family: 'exo', sans-serif
+	overflow-x: hidden
+	color: $text
+
+// Custom Sass
+
+.container
+	max-width: 1140px
+	padding:
+		right: $gutter/2
+		left: $gutter/2
+	margin:
+		left: auto
+		right: auto
+
+.no-gutters
+	padding: 0
+	margin: 0
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+a
+	color: $white
+	text-decoration: none
+	&:hover
+		color: $white
+		text-decoration: none
+
+button
+	border: 0
+	outline: none
+	&:hover, &:focus, &:active
+		outline: none
+
+input
+	font-size: 18px
+	color: $gray
+	border: 0
+	border-radius: 4px
+	background-color: $white
+	padding: 15px 25px
+	margin: 5px auto
+
+.h2-title
+	font-size: 42px
+	text-align: center
+	color: $blue-1
+
+.title-h3
+	font-size: 32px
+	text-align: center
+
+.btn
+	display: block
+	background-color: $blue-4
+	font-size: 18px
+	line-height: 1.4
+	color: $white
+	border-radius: 4px
+	max-width: 320px
+	padding: 15px 20px
+	margin: 20px auto
+	text-align: center
+
+.grayscale
+	-webkit-filter: grayscale(100%)
+	-moz-filter: grayscale(100%)
+	-ms-filter: grayscale(100%)
+	-o-filter: grayscale(100%)
+	filter: grayscale(100%)
+	filter: gray 
+	cursor: pointer
+	&:hover
+		-webkit-filter: none
+		-moz-filter: none
+		-ms-filter: none
+		-o-filter: none
+		filter: none
+		filter: none
+
+
+
+
+.home
+	position: relative
+	background: url(../img/@2x/home-back.jpg) no-repeat center
+	background-size: cover
+	padding: 25px 0 0
+	&:before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+	.logotype
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding-bottom: 50px
+		&__img
+			width: 10%
+		&__name
+			font-family: 'state'
+			font-size: 24px
+			color: $blue-4
+			padding: 10px 0 5px
+		&__sub
+			color: $blue-4
+	.content-offer
+		color: $white
+		&__title
+			font-size: 72px
+			font-weight: 900
+			line-height: 1
+			margin: 15px 0 20px
+			&_blue
+				color: $blue-4
+		&__sub
+			font-size: 28px
+		&__description
+			font-size: 24px
+			padding-right: 100px
+		&__text
+			background: url(../img/png/home__bg_text.png) no-repeat center
+			background-size: contain
+			font-size: 22px
+			line-height: 1.35
+			padding: 20px 150px 70px 25px
+			margin-top: 50px
+			height: 416px
+	.content
+		border: 1px $blue-3 solid
+		padding: 50px 30px 15px
+		margin: 70px 0 0 100px
+		&-form
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			&__title
+				font-size: 22px
+				color: $white
+				padding: 0 30px 25px
+			&__phone
+				min-width: 320px
+			&__skype
+				min-width: 320px
+			&__submit
+.advantage
+	background: url(../img/@2x/advantage__bg-810.jpg) no-repeat top center
+	padding-top: 100px
+	.content-item
+		text-align: center
+		margin-bottom: 450px
+		&__title
+			font-size: 20px
+			color: $blue-1
+		&__icon
+			position: relative
+			width: 55px
+			height: 55px
+	.content
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		justify-items: flex-end
+		align-items: flex-end
+		padding-top: 50px
+		&__title
+			text-align: right
+			text-transform: uppercase
+			width: 35%
+			margin-bottom: 25px
+		&__sub
+			font-size: 24px
+			font-weight: 500
+			&_blue
+				text-transform: uppercase
+				font-weight: 700
+				color: $blue-1
+.round
+	background: url(../img/@2x/oval__shark_bg.jpg) no-repeat center
+	background-size: contain
+	margin-top: 100px
+	height: 700px
+	.items
+		position: relative
+		&__title
+			font-size: 42px
+			color: $blue-1
+			font-weight: 800
+			font-style: italic
+		&__item
+			position: absolute
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			&_number
+				position: relative
+				font-size: 42px
+				color: $blue-1
+				font-weight: 800
+				font-style: italic
+				margin-right: 15px
+			&_text
+				position: relative
+			&:nth-child(2)
+				top: 38%
+				right: 0
+				left: 40%
+				.items__item_number
+					&:before
+						content: ''
+						position: absolute
+						top: 48px
+						left: -143px
+						background-image: url(../img/png/arrow-1.png)
+						background-repeat: no-repeat
+						background-position: center
+						background-size: contain
+						width: 161px
+						height: 187px
+			&:nth-child(3)
+				top: 125%
+				right: 18%
+				left: auto
+				.items__item_number
+					&:before
+						content: ''
+						position: absolute
+						top: -62px
+						right: 20px
+						background-image: url(../img/png/arrow-2.png)
+						background-repeat: no-repeat
+						background-position: center
+						background-size: contain
+						width: 71px
+						height: 97px
+			&:nth-child(4)
+				top: 260%
+				right: 10%
+				left: auto
+				.items__item_number
+					&:before
+						content: ''
+						position: absolute
+						top: -62px
+						right: -10px
+						background-image: url(../img/png/arrow-3.png)
+						background-repeat: no-repeat
+						background-position: center
+						background-size: contain
+						width: 41px
+						height: 67px
+			&:nth-child(5)
+				top: 395%
+				right: 12%
+				left: auto
+				.items__item_number
+					&:before
+						content: ''
+						position: absolute
+						top: -82px
+						right: -50px
+						background-image: url(../img/png/arrow-4.png)
+						background-repeat: no-repeat
+						background-position: center
+						background-size: contain
+						width: 61px
+						height: 87px
+			&:nth-child(6)
+				top: 515%
+				right: 0
+				left: 60%
+				.items__item_number
+					&:before
+						content: ''
+						position: absolute
+						top: -82px
+						right: -100px
+						background-image: url(../img/png/arrow-5.png)
+						background-repeat: no-repeat
+						background-position: center
+						background-size: contain
+						width: 71px
+						height: 97px
+			&:nth-child(7)
+				top: 525%
+				right: 0
+				left: 37%
+				.items__item_number
+					&:before
+						content: ''
+						position: absolute
+						top: 0
+						right: -100px
+						background-image: url(../img/png/arrow-6.png)
+						background-repeat: no-repeat
+						background-position: center
+						background-size: contain
+						width: 66px
+						height: 92px
+			&:nth-child(8)
+				top: 400%
+				right: 0
+				left: 9%
+				text-align: right
+				.items__item_number
+					margin-left: 10px
+					margin-right: 0
+				.items__item_number
+					&:before
+						content: ''
+						position: absolute
+						top: 45px
+						right: -75px
+						background-image: url(../img/png/arrow-7.png)
+						background-repeat: no-repeat
+						background-position: center
+						background-size: contain
+						width: 76px
+						height: 102px
+			&:nth-child(9)
+				top: 250%
+				right: 0
+				left: 15%
+				text-align: right
+				.items__item_number
+					&:before
+						content: ''
+						position: absolute
+						top: 80px
+						right: 0
+						background-image: url(../img/png/arrow-8.png)
+						background-repeat: no-repeat
+						background-position: center
+						background-size: contain
+						width: 51px
+						height: 77px
+				.items__item_number
+					margin-left: 10px
+					margin-right: 0
+.question
+	padding-top: 70px
+	margin-bottom: 100px
+	.content
+		text-align: center
+		&__title
+			font-size: 42px
+			font-weight: 800
+			color: $blue-1
+			margin-bottom: 30px
+		&__block
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			&_btn
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center
+				justify-content: center
+				max-width: 280px
+				width: 280px
+.cooperation
+	background: url(../img/@2x/arrow-big-grey.jpg) no-repeat top center
+	background-size: contain
+	.content
+		margin-top: 50px
+		&__title
+			text-align: left
+			text-transform: uppercase
+			margin-bottom: 100px
+		&__items
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			max-width: 100%
+			&_item
+				position: relative
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center
+				justify-content: center
+				min-width: 210px
+				min-height: 335px
+				margin-right: 10px
+				padding: 25px
+				&:before
+					content: ''
+					position: absolute
+					top: -20px
+					background-color: $white
+					min-width: 60px
+					min-height: 60px
+					font-size: 33px
+					font-weight: 900
+					font-style: italic
+					color: $blue-1
+					border: 5px $blue-1 solid
+					border-radius: 50%
+					text-align: center
+					padding-right: 7px
+					padding-top: 3px
+				&_text
+					font-weight: 600
+					font-size: 18px
+				&:nth-child(1)
+					background: url(../img/png/border__cub1.png) no-repeat top center
+					background-size: contain
+					top: 20px
+					align-items: flex-start
+					padding-top: 65px
+					text-align: center
+					&:before
+						content: '1'
+				&:nth-child(2)
+					background: url(../img/png/border__cub2.png) no-repeat top center
+					background-size: contain
+					align-items: flex-start
+					padding-top: 90px
+					text-align: center
+					&:before
+						content: '2'
+				&:nth-child(3)
+					background: url(../img/png/border__cub3.png) no-repeat top center
+					background-size: contain
+					top: -45px
+					min-height: 360px
+					text-align: center
+					&:before
+						content: '3'
+				&:nth-child(4)
+					background: url(../img/png/border__cub4.png) no-repeat top center
+					background-size: contain
+					top: -20px
+					align-items: flex-start
+					padding-top: 85px
+					text-align: center
+					&:before
+						content: '4'
+				&:nth-child(5)
+					background: url(../img/png/border__cub5.png) no-repeat top center
+					background-size: contain
+					margin-right: 0
+					top: 0
+					align-items: flex-start
+					padding-top: 80px
+					text-align: center
+					&:before
+						content: '5'
+		&__btn
+			margin: auto
+			text-align: center
+			max-width: 280px
+.approach
+	padding: 120px 0
+	.title-h3
+		text-transform: uppercase
+		margin-bottom: 80px
+	.item
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		flex-direction: column
+		text-align: center
+		margin-bottom: 30px
+		&__icon
+			width: auto
+			height: 100px
+		&__title
+			font-size: 18px
+			font-weight: 600
+.directions
+	position: relative
+	padding-bottom: 120px
+	z-index: 1
+	.title
+		margin-bottom: 50px
+	.content
+		.form
+			position: relative
+			border: 2px $border solid
+			border-bottom: 0
+			border-right: 0
+			width: 50%
+			padding: 35px 35px 100px
+			margin: 0 auto
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				right: 0
+				width: 2px
+				height: 624px
+				background-color: $border
+			&__title
+				font-size: 22px
+				font-weight: 600
+				padding: 0 30px 25px
+				display: block
+				text-align: center
+			&__sub
+				font-weight: 600
+				text-align: center
+			&__textarea
+				height: 250px
+				width: 100%
+				border-radius: 4px
+				padding: 25px
+				margin-bottom: 10px
+			&__phone
+				margin-right: 10px
+			&__phone,
+			&__email
+				width: 48.5%
+				border: 1px $gray solid
+			&__btn
+				position: relative
+				text-transform: uppercase
+				display: block
+				margin: 10px auto
+				min-width: 280px
+				padding: 20px 70px
+				z-index: 1
+			&__border
+				position: absolute
+				bottom: 0
+				right: 0
+				left: 0
+				margin: 0 auto
+				width: 100%
+.slider
+	position: relative
+	top: -320px
+	z-index: 0
+	.content
+		&__slider
+			&_item
+				background-image: url(../img/@2x/gallery-long.jpg)
+				background-repeat: no-repeat
+				background-position: center
+				background-size: contain
+				&_block
+					height: 1300px
+				.slid2
+					padding: 500px 0 0
+					.holder
+						width: 70%
+						margin: 0 auto
+						text-align: center
+					.holder,
+					.holder2,
+					.holder3
+						.t-big
+							position: relative
+							font-size: 28px
+							font-weight: 600
+							color: $white
+							transition: 1s
+							display: inline-block
+							text-transform: uppercase
+							&:hover
+								transition: 1s
+								transform: scale(1.03)
+								cursor: pointer
+						.t-normal
+							font-size: 24px
+							font-weight: 600
+							color: $white
+							transition: 1s
+							display: inline-block
+							&:hover
+								transition: 1s
+								transform: scale(1.03)
+								cursor: pointer
+						.t-small
+							font-size: 16px
+							color: $white
+							transition: 1s
+							display: inline-block
+							&:hover
+								transition: 1s
+								transform: scale(1.03)
+								cursor: pointer
+					.holder2
+						width: 30%
+						margin: 7% auto 0 20%
+						display: inline-block
+						text-align: center
+						.h2-title
+							font-size: 36px
+					.holder3
+						width: 30%
+						margin: 3% 15% 0 0
+						display: inline-block
+						float: right
+						text-align: center
+						.h2-title
+							font-size: 36px
+					.h2-title
+						font-size: 42px
+						color: $white
+						text-transform: uppercase
+				.slid1
+					.title
+						margin: 200px auto 20px
+						text-align: right
+						color: $white
+						font-size: 42px
+						font-weight: 600
+						text-transform: uppercase
+						span
+							font-weight: 800
+					.text-b1
+						font-size: 80px
+						font-weight: 900
+						line-height: 1
+						color: $white
+						margin: 150px 0 70px 300px
+						text-shadow: -10px 0 6px rgba(255,255,255,.45)
+					.text-b2
+						position: relative
+						top: 100px
+						left: 700px
+						font-size: 52px
+						font-weight: 900
+						line-height: 1
+						text-transform: uppercase
+						color: $white
+						margin: 0
+						text-shadow: -10px 0 6px rgba(255,255,255,.45)
+					.text-b3
+						position: relative
+						top: 80px
+						left: 200px
+						font-size: 52px
+						font-weight: 900
+						line-height: 1
+						text-transform: uppercase
+						color: $white
+						margin: 0
+						text-shadow: -10px 0 6px rgba(255,255,255,.45)
+			.slick-dots
+				position: absolute
+				bottom: 18%
+				right: 0
+				left: 0
+				margin: 0 auto
+				width: 150px
+				.slick-active
+					button
+						&:before
+							border: 3px $blue-4 solid
+							border-radius: 50%
+							width: 22px
+							height: 22px
+							background-color: transparent
+				li
+					list-style-type: none
+					display: inline-block
+					margin-right: 30px
+					button
+						position: relative
+						font-size: 1px
+						background-color: transparent
+						&:before
+							font-size: 82px
+							line-height: 20px
+							position: absolute
+							top: 0
+							left: 0
+							border: 3px $blue-4 solid
+							border-radius: 50%
+							width: 20px
+							height: 20px
+							content: ''
+							text-align: left
+							opacity: 1
+							background-color: $blue-4
+		&__top
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			padding-left: 100px
+			.h2-title
+				text-align: right
+				font-weight: 900
+			&_btn
+				padding: 15px 60px
+				text-align: center
+				text-transform: uppercase
+				margin-left: 40px
+		&__bottom
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+			align-items: center
+			padding-top: 120px
+			&_icon
+				margin-left: 50px
+				img
+					width: 200px
+			&_title
+				float: right
+				&_offer
+					text-transform: uppercase
+					font-size: 32px
+					font-weight: 700
+					color: $blue-1
+					text-align: right
+				&_sub
+					font-size: 28px
+					text-align: right
+.source
+	position: relative
+	top: -300px
+	padding-top: 40px
+	.content
+		position: relative
+		&__top
+			background: url(../img/@2x/bg-gray-1.jpg) no-repeat top center
+			background-size: 100%
+			padding: 260px 0 30px
+			.h3-title
+				font-size: 32px
+				text-transform: uppercase
+				color: $text
+				font-weight: 800
+				line-height: 1.1
+				text-align: center
+				width: 48%
+				margin: 0 auto 20px
+			&_sub
+				&_text
+					text-align: center
+					font-size: 26px
+					margin-bottom: 25px
+					display: block
+				&_icon
+					display: block
+					text-align: center
+					img
+						width: 60px
+						height: auto
+			&_desc
+				font-size: 26px
+			&_title
+				font-size: 32px
+				font-weight: 800
+				text-transform: uppercase
+				width: 50%
+				text-align: left
+				margin: 150px 0 20px
+			&_link
+				font-size: 18px
+				color: $blue-1
+				display: block
+				width: 300px
+				text-align: center
+				margin-top: 30px
+				margin-right: auto
+				margin-left: auto
+			&_btn
+				text-transform: uppercase
+				max-width: 380px
+		&__bottom
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+			align-items: flex-end
+			&_img
+				width: 70%
+			&_number
+				width: 80px
+				height: 80px
+				background-color: $white
+				font-size: 33px
+				font-weight: 900
+				font-style: italic
+				color: $blue-1
+				border: 5px $blue-1 solid
+				border-radius: 50%
+				text-align: center
+				padding-right: 17px
+				padding-bottom: 15px
+				padding-left: 10px
+				padding-top: 10px
+				margin-bottom: 20px
+				margin-right: 30px
+.econom
+	position: relative
+	top: -150px
+	.content
+		.h3-title
+			font-size: 32px
+			text-align: left
+			text-transform: uppercase
+			font-weight: 800
+		.sub
+			font-size: 28px
+			font-weight: 600
+			margin-top: 20px
+		&__list
+			display: inline-block
+			&_ul
+				padding: 0
+				&_li
+					position: relative
+					list-style-type: none
+					padding-left: 30px
+					font-size: 20px
+					line-height: 1.4
+					font-weight: 600
+					&:before
+						content: ''
+						position: absolute
+						top: 0
+						bottom: 0
+						left: 0
+						margin: auto
+						width: 8px
+						height: 8px
+						background-color: $blue-1
+						border-radius: 50%
+		&__btn
+			margin:  100px 0 0
+			display: inline-block
+			float: right
+			text-transform: uppercase
+			max-width: 360px
+.onec
+	background: url(../img/@2x/mack-bg-full.jpg) no-repeat center
+	background-size: cover
+	padding: 200px 0
+	.content
+		&__imac
+			display: block
+			max-width: 100%
+			width: 100%
+		.h3-title
+			color: $white
+			font-size: 32px
+			text-align: right
+			text-transform: uppercase
+			margin-bottom: 20px
+		&__sub
+			font-size: 28px
+			color: $white
+			text-align: right
+		&__description
+			font-size: 18px
+			text-align: right
+			color: $white
+		&__input
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: flex-end
+			&-flex
+				display: flex
+				align-items: flex-start
+				flex-direction: column
+				padding: 20px 40px
+				border-radius: 4px
+				&:nth-child(3)
+					padding-right: 0
+				input[type="radio"]
+					display: none
+				label
+					position: relative
+					display: flex
+					justify-content: center
+					align-items: center
+					margin: 5px
+					color: $white
+					font-weight: 600
+					margin-bottom: 15px
+					cursor: pointer
+				label
+					&:before
+						width: 24px
+						height: 24px
+						border: 2px solid #fff
+						border-radius: 100%
+						box-shadow: 0 2px 5px rgba(100, 100, 100, 0.3) inset, 0 0 0 rgba(145, 178, 211, 0.8)
+						content: ""
+						display: inline-block
+						position: relative
+						left: -7px
+				input[type="radio"] +label
+					&:after
+						background-color: #F8DE11
+						width: 10px
+						height: 10px
+						border-radius: 100%
+						content: ""
+						position: absolute
+						top: 7px
+						left: 0px
+						transform: scale(0)
+						transition: transform 0.2s cubic-bezier(0.8, 0.1, 0.2, 1.5)
+				input[type="radio"]:checked +label
+					&:after
+						transform: scale(1)
+					&:before
+						background-color: rgba(60, 179, 113, 0.15)
+						box-shadow: none
+.integration
+	.content
+		&__img
+			width: 85%
+			margin-top: 50px
+		.icon-phone,
+		.icon-sms
+			width: 90px
+		.h3-title
+			font-size: 32px
+			font-weight: 800
+			text-transform: uppercase
+		&__list
+			display: inline-block
+			padding: 20px 0 100px
+			&_li
+				position: relative
+				list-style-type: none
+				padding-left: 30px
+				font-size: 18px
+				line-height: 1.4
+				font-weight: 600
+				&:before
+					content: ''
+					position: absolute
+					top: 10px
+					left: 0
+					margin: auto
+					width: 8px
+					height: 8px
+					background-color: $blue-1
+					border-radius: 50%
+		&__item
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+			text-align: center
+			justify-content: center
+			&_icon
+				margin: 0 auto
+				width: 90px
+				height: 90px
+				margin-bottom: 10px
+			&_title
+				text-transform: uppercase
+				font-size: 20px
+				font-weight: 800
+			&_text
+				width: 246px
+				margin: 0 auto 50px
+			.icon-integrate
+				background: url(../img/@2x/icon-integrate.jpg) no-repeat center
+			.icon-xls
+				background: url(../img/@2x/icon-xls.jpg) no-repeat center
+			.icon-sovmest
+				background: url(../img/@2x/icon-sovmest.jpg) no-repeat center
+			.icon-mobi
+				background: url(../img/@2x/icon-mobi.jpg) no-repeat center
+			.icon-lock
+				background: url(../img/@2x/icon-lock.jpg) no-repeat center
+			.icon-flopy
+				background: url(../img/@2x/icon-flopy.jpg) no-repeat center
+			.icon-garant
+				background: url(../img/@2x/icon-garant.jpg) no-repeat center
+			.icon-proc
+				background: url(../img/@2x/icon-proc.jpg) no-repeat center
+.demonstration
+	position: relative
+	background: url(../img/@2x/bg-form-footer.jpg) no-repeat top center
+	padding-top: 350px
+	padding-bottom: 200px
+	.container
+		.h3-title
+			text-align: center
+			color: $white
+			font-size: 32px
+			text-transform: uppercase
+		&__form
+			&_input
+				text-align: center
+				input
+					margin-right: 10px
+					&:nth-child(3)
+						margin-right: 0
+			&_btn
+				text-transform: uppercase
+				padding: 25px 80px
+		&__contacts
+			&_text
+				text-align: center
+				color: $white
+				margin-top: 15px
+.footer
+	.content
+		.logotype
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+			align-items: center
+			padding-bottom: 50px
+			&__img
+				width: 30%
+			&__name
+				font-family: 'state'
+				font-size: 24px
+				color: $blue-4
+				padding: 10px 0 5px
+			&__sub
+				color: $blue-4
+	.contact
+		&__title
+			display: block
+			margin-top: 20px
+			margin-bottom: 15px
+		&__socseti
+			margin-bottom: 20px
+			img
+				width: 35px
+		&__phone
+			color: $text
+		&__email
+			color: $text
+	.navigate
+		&__title
+			font-weight: 700
+			margin-top: 20px
+		&__ul
+			list-style-type: none
+			padding: 0
+			&_li
+				a
+					color: $text
+	.navlink
+		font-weight: 700
+		color: $text
+		display: block
+		margin-top: 20px
+.thanks.is-show,
+.full-modal.is-show,
+.modal.is-show,
+.overlay.is-show
+	opacity: 1
+	transition: opacity 150ms linear
+	z-index: 9999
+body.js-no-scroll
+	overflow: hidden
+.full-modal
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: -15
+	opacity: 0
+	.modal-wrap
+		height: 100vh
+		padding: 0
+		background-color: rgba(0,0,0,.7)
+		display: flex
+		align-items: center
+		align-content: center
+		justify-content: center
+		.modal
+			position: relative
+			display: flex
+			align-content: center
+			justify-content: center
+			max-width: 540px
+			width: 100%
+			margin: 0 15px
+			padding: 50px 0 35px 0
+			border: 0
+			outline: 0
+			vertical-align: baseline
+			background-color: #0B477B
+			font-size: 100%
+			-webkit-border-radius: 10px
+			-moz-border-radius: 10px
+			border-radius: 10px
+			-webkit-box-shadow: 0 0 15px rgba(0,0,0,.16)
+			-moz-box-shadow: 0 0 15px rgba(0,0,0,.16)
+			box-shadow: 0 0 15px rgba(0,0,0,.16)
+			text-align: center
+		.callback__title
+			font-family: 'exo'
+			font-weight: 700
+			font-size: 24px
+			color: white
+			text-align: center
+			margin-bottom: 20px
+		.name,
+		.phone
+			padding: 15px 45px 15px 25px
+			background-color: rgb(255,255,255)
+			border: 1px white solid
+			width: 100%
+			max-width: 268px
+			margin: 0 auto 20px
+			text-align: center
+			&::placeholder
+				font-family: 'exo'
+				font-size: 21px
+				color: gray
+			&:focus:required:invalid
+				outline: none
+				border-color: transparent
+				border: none
+				border-bottom: 1px solid #ffc107
+		.submit
+			max-width: 268px
+			width: 100%
+			margin-bottom: 20px
+			background-color: #0585DE
+			font-family: 'exo'
+			text-transform: uppercase
+			color: white
+			font-size: 21px
+			border-radius: 4px
+			padding: 25px 0
+.closes
+	position: absolute
+	width: 22px
+	height: 22px
+	top: 15px
+	right: 15px
+	border-radius: 5%
+	cursor: pointer
+	z-index: 5
+	background-image: url(../img/svg/close.svg)
+	background-position: center center
+	background-repeat: no-repeat
+	transition: 0.3s ease-in-out all
+	&:hover
+		transform: rotate(90deg)
+		transition: 0.3s ease-in-out all
+.thanks
+	z-index: -15
+	background-color: rgba(255,255,255,.9)
+	opacity: 0
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	margin: auto
+	&-title
+		position: relative
+		font-size: 77px
+		color: $text
+		line-height: 96px
+		font-weight: 900
+		text-transform: uppercase
+	&-sub
+		font-size: 38px
+		line-height: 48px
+		font-weight: 900
+		color: $text
+		text-align: center
+	.thanks-check
+		position: absolute
+		top: -120px
+		right: -260px
+	.closes
+		background-image: url(../img/svg/close-black.svg)
+
+
+@media (max-width: 576px)
+	.btn
+		font-size: 16px
+	.title-h3
+		font-size: 24px
+	.home
+		background-position: 80% 100%
+		background-size: cover
+		padding-bottom: 150px
+		.content-offer
+			&__title
+				font-size: 68px
+				margin-top: 0
+				span
+					position: relative
+					top: 7px
+			&__sub
+				font-size: 24px
+			&__description
+				font-size: 24px
+				padding: 0
+			&__text
+				background-size: cover
+				font-size: 16px
+				padding: 15px 30px 40px 10px
+				margin-top: 20px
+		.content
+			margin: 0
+			padding: 20px 10px
+			&-form
+				&__title
+					padding: 0 10px 15px
+					font-size: 18px
+				&__phone,
+				&__skype
+					min-width: 240px
+					width: 100%
+				&__submit
+					max-width: 100%
+					font-size: 16px
+	.advantage
+		background: none
+		padding-top: 0
+		.content-item
+			margin-bottom: 15px
+		.content
+			&__title
+				width: 100%
+				margin-bottom: 10px
+			&__sub
+				font-size: 18px
+				margin-bottom: 5px
+	.round
+		margin-top: 50px
+		background-size: cover
+		background-position: left -100px center
+		height: auto
+		.items
+			&__title
+				font-size: 32px
+				margin-bottom: 25px
+			&__item
+				position: static
+				margin-left: 15px
+				&:nth-child(7)
+					.items__item_number
+						order: 1
+					.items__item_text
+						order: 2
+				&:nth-child(8)
+					.items__item_number
+						margin-right: 25px
+						margin-left: 0
+						order: 1
+					.items__item_text
+						text-align: left
+						order: 2
+				&:nth-child(9)
+					.items__item_number
+						margin-right: 25px
+						margin-left: 0
+						order: 1
+					.items__item_text
+						text-align: left
+						order: 2
+				&_number
+					margin-right: 25px
+				&_text
+					&:after
+						content: none
+	.question
+		padding-top: 50px
+		margin-bottom: 50px
+		.content
+			&__title
+				font-size: 32px
+			&__block
+				flex-direction: column
+				&_btn
+					margin-top: 10px
+					margin-bottom: 10px
+	.cooperation
+		background-size: 900%
+		.content
+			margin-top: 70px
+			&__title
+				margin-bottom: 35px
+			&__items
+				flex-direction: column
+				&_item
+					min-height: 150px
+					&:nth-child(1)
+						background-size: 100% 100%
+						padding-bottom: 10px
+						padding-top: 45px
+						margin-bottom: 40px
+					&:nth-child(2)
+						background-size: 100% 100%
+						padding-top: 50px
+						margin-bottom: 70px
+					&:nth-child(3)
+						background-size: 100% 100%
+						padding-top: 50px
+						min-height: 200px
+					&:nth-child(4)
+						background-size: 100% 100%
+						padding-top: 50px
+						padding-bottom: 30px
+					&:nth-child(5)
+						padding-top: 50px
+						background-size: 100% 100%
+			&__btn
+				max-width: 100%
+				margin: 0
+				margin-top: 40px
+	.approach
+		padding-top: 50px
+		padding-bottom: 30px
+		.title-h3
+			margin-bottom: 15px
+		.col-md-3
+			width: 50%
+	.directions
+		padding-bottom: 50px
+		.title
+			font-size: 32px
+			line-height: 1
+		.content
+			.form
+				margin: 0
+				width: 100%
+				padding: 15px 15px 25px
+				border: 2px #6bb8ee solid
+				&__title
+					font-size: 16px
+					padding: 0
+				&__textarea
+					height: 100px
+				&__phone,
+				&__email
+					width: 100%
+				&__border
+					display: none
+				&__btn
+					min-width: 100%
+				&:after
+					content: none
+	.slider
+		top: 0
+		.content
+			&__slider
+				&_item
+					background-image: url(../img/@1x/gallery-long-mobi.jpg)
+					background-position: top left
+					background-size: cover
+					&_block
+						height: 700px
+						padding-bottom: 160px
+					.slid1
+						height: auto
+						.title
+							font-size: 32px
+							margin-top: 75px
+						.text-b1
+							margin: 60px auto 20px
+							font-size: 48px
+						.text-b2
+							top: 0
+							left: 0
+							font-size: 42px
+							margin-top: 60px
+							text-align: right
+						.text-b3
+							top: 0
+							left: 0
+							margin-top: 50px
+					.slick-dots
+						bottom: 0
+					.slid2
+						padding-top: 50px
+						.holder
+							margin: 0
+							width: 100%
+							svg
+								height: 350px
+								position: relative
+								top: -30px
+						.holder2
+							width: 100%
+							margin: 0
+							.h2-title
+								font-size: 28px
+							svg
+								height: 100px
+								position: relative
+								top: -30px
+						.holder3
+							width: 100%
+							margin: 0
+							.h2-title
+								font-size: 28px
+							svg
+								height: 100px
+								position: relative
+								top: -30px
+			&__top
+				margin-top: 50px
+				padding: 0
+				flex-wrap: wrap
+				.h2-title
+					font-size: 32px
+				&_btn
+					max-width: 100%
+					width: 100%
+					margin: 20px 0 0
+			&__bottom
+				flex-wrap: wrap
+				padding-top: 20px
+				&_title
+					&_offer
+						font-size: 26px
+					&_sub
+						font-size: 18px
+	.source
+		top: 0
+		.content
+			&__top
+				padding-top: 50px
+				padding-bottom: 30px
+				.h3-title
+					font-size: 26px
+					line-height: 1.2
+					margin: 20px auto
+					width: 100%
+				&_sub
+					&_text
+						font-size: 22px
+						margin-bottom: 10px
+					&_icon
+						img
+							width: 50px
+				.h2-title
+					font-size: 32px
+					line-height: 1
+				&_btn
+					font-size: 14px
+				&_title
+					font-size: 24px
+					margin: 30px 0 0
+					width: 100%
+				&_desc
+					font-size: 18px
+					margin-top: 20px
+					display: block
+			&__bottom
+				&_img
+					display: none
+	.econom
+		top: 0
+		padding-top: 50px
+		.content
+			.h3-title
+				font-size: 24px
+				text-align: center
+			&__btn
+				margin-top: 30px
+	.onec
+		background-position: right center
+		padding-top: 100px
+		padding-bottom: 70px
+		margin-top: 20px
+		.content
+			.h3-title
+				font-size: 24px
+				margin-top: 20px
+			&__sub
+				font-size: 18px
+			&__input
+				&-flex
+					padding: 10px
+	.integration
+		.content
+			&__list
+				padding: 20px 0 0 10px
+			&__img
+				margin: 0
+	.demonstration
+		.container
+			.h3-title
+				font-size: 24px
+				margin-bottom: 20px
+			&__form
+				&_btn
+					max-width: 100%
+					width: 100%
+					margin: 20px 0
+				&_input
+					input
+						width: 100%
+						margin: 7px 0
+	.footer
+		.content
+			.logotype
+				margin-bottom: 20px
+				padding-bottom: 0
+		.contact
+			text-align: center
+			&__title
+	.thanks
+		&-title
+			font-size: 55px
+			line-height: 60px
+		&-sub
+			font-size: 28px
+			line-height: 32px
+			br
+				display: none
+
+
+
+
+
+
+
+
+
+
