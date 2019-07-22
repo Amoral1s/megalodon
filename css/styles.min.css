@@ -8297,3 +8297,13 @@ border: 5px solid rgb(0, 149, 255, 0.3)!important;
   }
 
 }
+
+
+#webfree {
+height: 30px;
+background: #000;
+font-size: 14px;
+color: #fff;
+display: flex;
+justify-content: center;
+align-items: center;}
